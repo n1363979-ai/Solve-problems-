@@ -23,34 +23,34 @@
     <div class="card">
       
 
-        <section class="signup">
+        <section class="signup" id="signup">
           <form action="" method="post">
             <div class="title">
                 <h1>تسجيل الدخول</h1>
             </div>
 
-            <div class="email">
+            <div class="signupemail">
                 <div class="align-label">
-            <label for="email">الإيميل</label>
+            <label for="signupemail">الإيميل</label>
              </div>
              <div class="align-input">
-            <input type="email" name="email" id="email" placeholder="naif@example.com">
+            <input type="email" name="signupemail" id="signupemail" placeholder="naif@example.com">
              </div>
             </div>
 
-            <div class="passowrd">
+            <div class="signupPassowrd">
                 <div class="align-label">
-            <label for="password">كلمة المرور</label>
+            <label for="signupPassowrd">كلمة المرور</label>
              </div>
              <div class="align-input">
-            <input type="password" name="password" id="password" placeholder="ادخل كلمة المرور">
+            <input type="password" name="signupPassowrd" id="signupPassowrd" placeholder="ادخل كلمة المرور">
            </div>
         </div>
             <div ><div class="forggot"><a href="">نسيت كلمة المرور؟</a></div></div>
             
             <div class="button">
-            <button type="submit">تسجيل الدخول</button>
-             <button class="signin-button">تسجيل جديد</button>
+            <button type="submit" >تسجيل الدخول</button>
+             <button type="button" class="signin-button" id="signin-button" >تسجيل جديد</button>
 
             </div>
         
@@ -61,40 +61,40 @@
         
         </section>
 
-        <section class="signin">
+        <section class="signin" id="signin">
      
             <form action="" method="post">
                        <div class="title"><h1>تسجيل جديد</h1></div>
-                <div class="fname">
+                <div class="signinfname">
                     <div class="align-label">
-                        <label for="fname">الإسم الأول</label>
+                        <label for="signinfname">الإسم الأول</label>
                     </div>
                     <div class="align-input">
-                        <input type="text" name="fname" id="name" placeholder="ادخل الاسم الأول">
+                        <input type="text" name="signinfname" id="signinfname" placeholder="ادخل الاسم الأول">
                     </div>
                 </div>
-                 <div class="lname">
+                 <div class="signinlname">
                     <div class="align-label">
-                        <label for="lname">الإسم الأخير</label>
+                        <label for="signinlname">الإسم الأخير</label>
                     </div>
                     <div class="align-input">
-                        <input type="text" name="lname" id="lname" placeholder="ادخل الاسم الأخير">
+                        <input type="text" name="signinlname" id="signinlname" placeholder="ادخل الاسم الأخير">
                     </div>
                 </div>
-                 <div class="email">
+                 <div class="signinemail">
                     <div class="align-label">
-                        <label for="email">الإيميل</label>
+                        <label for="signinemail">الإيميل</label>
                     </div>
                     <div class="align-input">
-                        <input type="email" name="email" id="email" placeholder="naif@example.com">
+                        <input type="email" name="signinemail" id="signinemail" placeholder="naif@example.com">
                     </div>
                 </div>
-                 <div class="password">
+                 <div class="signinpassword">
                     <div class="align-label">
-                        <label for="password">كلمة المرور</label>
+                        <label for="signinpassword">كلمة المرور</label>
                     </div>
                     <div class="align-input">
-                        <input type="password" name="password" id="password" placeholder="ادخل كلمة المرور">
+                        <input type="password" name="signinpassword" id="signinpassword" placeholder="ادخل كلمة المرور">
                     </div>
                 </div>
                 <div class="signin-code">
@@ -107,8 +107,8 @@
                 </div>
                 <div class="button">
                     <div class="align-button">
-                    <button class="signup-button">تسجيل جديد</button>
-                    <button class="signin-button" type="submit">تسجيل</button>
+                    <button class="signup-button" id="signup-button" type="button">تسجيل الدخول</button>
+                    <button class="signin-button" type="submit">تسجيل جديد</button>
 
                   </div>
                    
@@ -120,5 +120,7 @@
    </main>
 
    <footer></footer>
+
+   <script src="JavaScript.js"></script>
 </body>
 </html>
