@@ -11,32 +11,81 @@
         <nav>
             <ul>
                 <li><a href="index.html">الرئيسية</a></li>
-                <li><a href="">طلبات الصيانة</a></li>
-                <li><a href="">محادثه</a></li>
+                <li><button id="AddRequestButton">اضافة طلب</button></li>
+                 <li><button >طلبات منجزة</button></li>
                 <li class="profile-img"><a href=""><img src="images/icons8-profile-100.png" alt="الملف الشخصي"></a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="add-order">
-            <div class="card1">kk</div>
-            <div class="card">
-                <div class="card-content">
-                    <div class="row-start">
-                        <button action="model">اضافة طلب </button>
-                    </div>
-                    <div class="row-center">
 
-                    </div>
-                    <div class="row-end">
+    <div class="container">
+        <aside>
+            <section class="chat">
+               <div class="chat-wrapper">
+                <div class="text-time">
+                    <h3>السلام عليكم عندي مشكله</h3>
+                    <span>5pm</span>
+                </div>
 
-                    </div>
+                  <div class="text-time2">
+                    <h3>وعليكم السلام وش مشكلتك؟</h3>
+                    <span>5pm</span>
+                </div>
+                 
+
+                </div>
+              
+                 <div class="chat-input">
+                    <input type="text">
+                     <button type="submit" title="ارسال">
+                        ارسال
+                     </button>
+
+                </div>
+               
+            </section>
+        </aside>
+
+        <main> </main>
+    <footer></footer>
+
+    <dialog id="Dialog">
+        <div id="DialogContent">
+            <div class="issues">
+            <h1 class="title">طلب صيانة</h1>
+            <div class="section">
+                <h2 class="section-title">الاعطال</h2>
+                <div class="issue">
+                <button id="selected">إنترنت</button>
+                <button >تعليق</button>
+                <button >مجال</button>
+                <button >تثبيت</button>
                 </div>
             </div>
-        </section>
-    </main>
-    <footer></footer>
+
+                 <div class="section" style="margin-top: 50px;">
+                <h2 class="section-title">النظام</h2>
+                <div class="issue">
+                <button id="selected" style="background-color: rgba(69, 108, 248, 0.504);">windos10</button>
+                <button  style="background-color: rgba(69, 108, 248, 0.504);">windos9</button>
+                <button  style="background-color: rgba(69, 108, 248, 0.504);">windos8</button>
+                <button  style="background-color: rgba(69, 108, 248, 0.504);">windos7</button>
+                </div>
+            </div>
+            </div>
+
+     
+            <div class="SendRequest">
+                <input type="text" placeholder="الوصف">
+                <button type="submit" >إرسال</button>
+            </div>
+        </div>
+
+    </dialog>
+
+
+    <script src="Javascript/trainer.js"></script>
 </body>
-<link rel="stylesheet" href="JavaScript.js">
+
 </html>

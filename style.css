@@ -44,16 +44,21 @@ header nav ul {
 }
 
 
-header nav ul li a {
+header nav ul li a , nav ul li button {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
     color: rgb(76, 76, 76);
     transition: 300ms;
     font-size: clamp(15px, 4vw, 25px);
+    background-color: transparent;
+    border: none;
+ 
 }
 
-header nav ul li a:hover {
+
+
+header nav ul li a:hover , nav ul li button:hover {
     color: black;
     font-size: calc(clamp(15px, 5vw, 25px) + 10px);
     transition: 300ms;
@@ -90,7 +95,7 @@ header nav ul li a:hover {
 
     min-height: 250px;
     max-height: 250px;
-    margin-top: 100px;
+  
 
 }
 
@@ -374,6 +379,36 @@ header nav ul li a:hover {
     flex-grow: 1;
 }
 
+.engineer-page dialog {
+    margin: auto;
+    position: fixed;
+    inset: 0;
+   
+   
+    border: none;
+    border-radius: 10px;
+    width: 50%;
+    height: 50%;
+    padding: 0px;
+
+    display: none;
+    
+}
+
+.engineer-page dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.504);
+}
+
+.engineer-page dialog div{
+    flex: 1;
+
+   
+    padding: 16px;
+}
+
+
+
+
 /*engineer chat section*/
 
 
@@ -571,10 +606,11 @@ header nav ul li a:hover {
 .engineer-page section.requests .request-card {
     width: 90%;
     height: 150px;
-    background-color: rgb(250, 252, 124);
-    border: 1px rgb(253, 253, 124) solid;
+    background-color: #fefefe;
+    border: 1px rgb(220, 220, 220) solid;
+    border-right: 15px rgb(255, 225, 0) solid;
     border-radius: 10px;
-    box-shadow: 0px 6px 20px rgba(229, 217, 112, 0.217);
+    box-shadow: 0px 6px 20px rgba(112, 198, 229, 0.217);
     margin-bottom: 10px;
     display: flex;
     justify-content: start;
@@ -679,7 +715,15 @@ header nav ul li a:hover {
 
 
 
-.trainer-page .profile-img {
+
+
+
+.trainer-page {
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.trainer-page header nav ul .profile-img {
 
     margin-right: auto;
 
@@ -692,52 +736,247 @@ header nav ul li a:hover {
 
 }
 
-.trainer-page main {
-    flex: 1;
+.trainer-page header {
+    box-shadow: none;
+
+}
+
+.trainer-page .container {
     display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    height: calc(100vh - 70px);
 
 
 }
 
-/*trainer add order section*/
+.trainer-page aside {
+    border: 1px whitesmoke solid;
+    border-radius: 10px;
+    box-shadow: 0px 6px 20px rgba(74, 196, 249, 0.35);
+    width: 35%;
+    padding: 20px;
+    overflow: scroll;
+}
 
-.trainer-page section {
-    flex: 1;
+.trainer-page main {
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
+
+    align-items: center;
+    flex-grow: 1;
 }
 
-.trainer-page .add-order .card {
-    width: 50%;
-    height: 200px;
-    border: 1px #ffffff solid;
+.trainer-page dialog {
+    margin: auto;
+    position: fixed;
+    inset: 0;
+   
+   
+    border: none;
     border-radius: 10px;
-    box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.306);
-    align-self: center;
+    width: 50%;
+    height: 50%;
+    padding: 0px;
+
+    display: none;
+
+ 
+    
 }
 
-.trainer-page .add-order .card-content {
+.trainer-page dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.504);
+}
+
+.trainer-page dialog #DialogContent{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 16px;
+    
+}
+
+.trainer-page dialog h1{
+    font-size: 50px;
+}
+
+.trainer-page dialog .issues{
+    flex: 1;
+   
+   
+}
+
+.trainer-page dialog  .issues .section{
+    margin-top: 20px;
+}
+
+.trainer-page dialog  .issues .section-title{
+    font-size: 30px;
+}
+
+
+.trainer-page dialog  .issues .section .issue {
+   display: flex;
+   gap: 20px;
+   
+   
+}
+
+.trainer-page dialog  .issues .section .issue button{
+    background-color: rgba(254, 199, 0, 0.301);
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 5px;
+    width: 90px;
+}
+.trainer-page dialog  .issues .section .issue button.selected{
+    background-color:rgb(255, 227, 42);
+}
+
+
+
+.trainer-page dialog .SendRequest {
+    display: flex;
+   padding-bottom: 10px;
+   gap: 5px;
+}
+
+.trainer-page dialog .SendRequest input{
+   width: 80%;
+   height: 30px;
+   text-indent: 10px;
+   border: 1px gray solid;
+   border-radius: 10px;
+  
+}
+
+.trainer-page dialog .SendRequest button{
+   flex: 1;
+   height: 30px;
+   border: none;
+   border-radius: 10px;
+   background-color:#358ffd;
+   color: white;
+   
+   
+  
+}
+.trainer-page dialog .SendRequest button:hover{
+    background-color: #2485fc;
+}
+
+
+/*trainer chat section*/
+
+
+.trainer-page aside .chat {
+
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: end;
+
 
 }
 
+.trainer-page aside .chat-wrapper {
 
+    overflow: scroll;
 
-.trainer-page .add-order .card1 {
-    width: 60%;
-    height: 300px;
-    border: 1px #ffffff solid;
-    border-radius: 10px;
-    box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.306);
-    align-self: center;
-    position: absolute;
-    z-index: 10;
-    background-color: red;
+}
+
+.trainer-page aside .chat-wrapper::-webkit-scrollbar {
+
     display: none;
+
+}
+
+.trainer-page aside .chat-wrapper {
+
+    scrollbar-width: none;
+
+}
+
+.trainer-page aside .text-time {
+    display: flex;
+    
+    align-self: end;
+    flex-direction: row-reverse;
+    margin-top: 10px;
+
+
+}
+
+.trainer-page aside .text-time2 {
+    display: flex;
+
+
+    flex-direction: row;
+    margin-top: 10px;
+    align-self: start;
+
+
+
+}
+
+.trainer-page aside .text-time2 h3 {
+    background-color: rgb(0, 175, 0);
+    color: rgb(255, 255, 255);
+}
+
+.trainer-page aside h3 {
+    background-color: rgb(248, 248, 248);
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 15px;
+    color: rgb(42, 42, 42);
+    padding: 10px;
+    font-size:clamp(15px,1.6vw,50px)
+    
+}
+
+.trainer-page aside span {
+    color: rgb(53, 53, 53);
+    font-size: 12px;
+    align-self: end;
+
+}
+
+.trainer-page aside .chat-input {
+    margin-top: 30px;
+    width: 100%;
+    align-self: center;
+    display: flex;
+
+}
+
+.trainer-page aside .chat-input input {
+    flex: 1;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(219, 219, 219);
+    padding: 5px;
+    font-size: 15px;
+}
+
+.trainer-page aside .chat-input button {
+    width: 20%;
+    border: 1px #5ca4f7 solid;
+    border-radius: 10px;
+    color: white;
+    background-color: #328bf9;
+    margin-right: 10px;
+    transition: 300ms;
+
+}
+
+.trainer-page aside .chat-input button:hover {
+
+    background-color: #2485fc;
+
+
 
 }
 
