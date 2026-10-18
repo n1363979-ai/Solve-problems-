@@ -6,7 +6,7 @@
 
 body {
     background-color: #ffffff;
-    min-height: 100vh;
+    min-height: 100dvh;
 
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@ header {
     padding: 0px 20px;
     height: 70px;
     justify-content: flex-start;
-    background-color: #fafafc;
+    background-color: #f8f8f8;
     /* background-color:#f8f9fa; */
     /* box-shadow: 0px 0px 5px 0px rgb(88, 112, 234); */
     box-shadow: 0px 6px 20px rgba(37, 99, 235, 0.20);
@@ -42,10 +42,15 @@ header nav ul {
     gap: 20px;
     width: 100%;
 }
-
+header nav ul li a , nav ul div{
+    display: flex;
+    gap: 20px;
+    margin-right: auto;
+}
 
 header nav ul li a , nav ul li button {
-    display: inline-flex;
+    display:flex;
+    text-align: center;
     align-items: center;
     text-decoration: none;
     color: rgb(76, 76, 76);
@@ -66,24 +71,27 @@ header nav ul li a:hover , nav ul li button:hover {
 }
 
 
-/*index page*/
+/* ========================================== */
+/*                 INDEX PAGE                 */
+/* ========================================== */
 
 .index-page main {
-    /* background:linear-gradient(rgb(255, 255, 255) 0%,rgb(245, 245, 245) 45%,rgb(235, 235, 235) 100%); */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
     height: auto;
-    background-image: url(images/IMG_0058.JPG);
-    background-size: 300px auto;
-    background-repeat: repeat;
-    background-color: #38BDF8;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/technology.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
 
 }
 
-.index-page main section {
+ .index-page main #startSection{
+    /*
     display: flex;
     border: 1px rgba(173, 173, 173, 0.304) solid;
     border-radius: 10px;
@@ -95,11 +103,42 @@ header nav ul li a:hover , nav ul li button:hover {
 
     min-height: 250px;
     max-height: 250px;
-  
+  */
+
+    color: white; 
+    font-size: clamp(50px,2vw,100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+} 
+
+.index-page #goalSection{
+    flex: 1;
+    color: white;
+    padding: 100px;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    
 
 }
+#goalSection h1{
+    font-size: clamp(30px,3vw,90px);
+   
+}
 
-/*signup page*/
+#goalSection p{
+    font-size: clamp(20px,2vw,50px);
+    
+   
+}
+
+/* ========================================== */
+/*                SIGN-UP PAGE                */
+/* ========================================== */
 
 .signup-page main {
     display: flex;
@@ -192,28 +231,11 @@ header nav ul li a:hover , nav ul li button:hover {
 }
 
 
-@media (max-width:768px) {
 
 
-
-
-
-
-
-    .signup-page main section form div input {
-        min-height: 30px;
-
-
-    }
-
-    .signup-page main section form div button {
-        min-height: 40px;
-    }
-
-}
-
-
-/*login page*/
+/* ========================================== */
+/*                 LOGIN PAGE                 */
+/* ========================================== */
 
 .login-page main {
     display: flex;
@@ -299,33 +321,12 @@ header nav ul li a:hover , nav ul li button:hover {
 
 }
 
-@media (max-width:768px) {
-
-    .login-page main section {
-        width: 70%;
-        height: 300px;
-        padding: 10px;
-    }
-
-    .login-page main section form div input {
-        width: 250px;
-        height: 45px;
-        font-size: 15px;
-    }
-
-    .login-page main section form div label {
-        font-size: 15px;
-    }
-
-    .login-page main section form div button {
-        font-size: 15px;
-        width: 250px;
-        height: 45px;
-    }
-}
 
 
-/*engineer page*/
+
+/* ========================================== */
+/*               ENGINEER PAGE                */
+/* ========================================== */
 .engineer-page {
     max-height: 100vh;
     overflow: hidden;
@@ -365,6 +366,8 @@ header nav ul li a:hover , nav ul li button:hover {
     width: 35%;
     padding: 20px;
     overflow: scroll;
+   
+   
 }
 
 .engineer-page main {
@@ -399,7 +402,7 @@ header nav ul li a:hover , nav ul li button:hover {
     background-color: rgba(0, 0, 0, 0.504);
 }
 
-.engineer-page dialog div{
+.engineer-page dialog .DialogContent{
     flex: 1;
 
    
@@ -409,65 +412,136 @@ header nav ul li a:hover , nav ul li button:hover {
 
 
 
-/*engineer chat section*/
+/* ========================================== */
+/*          ENGINEER CHAT SECTION             */
+/* ========================================== */
+
+aside .trainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    
+    overflow: scroll;
+    padding: 10px;
+}
+
+aside .trainer .person-card{
+    
+    overflow: hidden;
+    border: 1px rgba(128, 128, 128, 0.351) solid;
+    flex-shrink: 0;
+    border-radius: 10px;
+    box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.1);
+    width: 100%;
+    height: 20%;
+    background-color: white;
+    
+}
+
+aside .trainer div .person-content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+    width: 100%;
+    gap: 10px;
+    font-size: clamp(20px,1.3vw,50px);
+    
+}
+aside .trainer div .person-content :is(h1,p,span){
+    flex: 1 0 ;
+    height: 100%;
 
 
-.engineer-page aside .chat {
+}
+
+aside .trainer div .person-content :is(p,span) {
+   font-size: clamp(10px,1.3vw,50px);
+    
+    color: rgb(59, 59, 59);
+
+}
+
+
+.chat {
 
     height: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: end;
 
 
 }
 
-.engineer-page aside .chat-wrapper {
+.chat .goBack {
 
-    overflow: scroll;
+margin-bottom: auto;
+margin-right: auto;
+
 
 }
 
-.engineer-page aside .chat-wrapper::-webkit-scrollbar {
+.chat .goBack button {
+width: 100px;
+height: 30px;
+background-color: white;
+border: 1px gray solid;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
+}
+
+.chat .goBack button img{
+    width: 100px;
+    height: 30px;
+}
+
+.chat-wrapper {
+   
+    overflow: scroll;
+    scrollbar-width: none;
+    
+}
+
+ .chat-wrapper::-webkit-scrollbar {
 
     display: none;
 
-}
+ }
 
-.engineer-page aside .chat-wrapper {
 
-    scrollbar-width: none;
 
-}
-
-.engineer-page aside .text-time {
+.chat .text-time {
     display: flex;
 
     align-self: end;
     flex-direction: row-reverse;
     margin-top: 10px;
+    font-size: 25px;
+    font-size: clamp(10px,1.3vw,25px);
 
 
 }
 
-.engineer-page aside .text-time2 {
+.chat  .text-time2 {
     display: flex;
 
 
     flex-direction: row;
     margin-top: 10px;
     align-self: start;
+   font-size: clamp(10px,1.3vw,25px);
 
 
 
 }
 
-.engineer-page aside .text-time2 h3 {
+.chat  .text-time2 h3 {
     background-color: rgb(0, 175, 0);
     color: rgb(255, 255, 255);
 }
-
-.engineer-page aside h3 {
+.chat h3 {
     background-color: rgb(248, 248, 248);
     border: 1px solid rgb(219, 219, 219);
     border-radius: 15px;
@@ -475,22 +549,23 @@ header nav ul li a:hover , nav ul li button:hover {
     padding: 10px;
 }
 
-.engineer-page aside span {
+.chat  span {
     color: rgb(53, 53, 53);
-    font-size: 12px;
+    font-size:  clamp(12px,2vw,15px);;
     align-self: end;
 
 }
 
-.engineer-page aside .chat-input {
+.chat .chat-input {
     margin-top: 30px;
     width: 100%;
     align-self: center;
     display: flex;
+    
 
 }
 
-.engineer-page aside .chat-input input {
+.chat .chat-input input {
     flex: 1;
     height: 30px;
     border-radius: 5px;
@@ -499,7 +574,7 @@ header nav ul li a:hover , nav ul li button:hover {
     font-size: 15px;
 }
 
-.engineer-page aside .chat-input button {
+.chat .chat-input button {
     width: 20%;
     border: 1px #5ca4f7 solid;
     border-radius: 10px;
@@ -510,7 +585,7 @@ header nav ul li a:hover , nav ul li button:hover {
 
 }
 
-.engineer-page aside .chat-input button:hover {
+.chat .chat-input button:hover {
 
     background-color: #2485fc;
 
@@ -518,122 +593,194 @@ header nav ul li a:hover , nav ul li button:hover {
 
 }
 
-/*engineer summary section*/
+/* ========================================== */
+/*          ENGINEER SUMMARY SECTION          */
+/* ========================================== */
+
+
 .engineer-page main section.summary {
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
 
 
-    grid-template-columns: repeat(2, minmax(200px, 300px));
-    grid-template-rows: repeat(4, minmax(50px, 155px));
+
+    grid-template-columns: repeat(2, minmax(300px,1fr));
+    
+    grid-template-rows: auto;
     width: 100%;
     height: 100%;
     margin: 5px;
     gap: 3px;
     justify-content: center;
     align-items: center;
+    padding: 1px;
+   overflow: scroll;
+    
+}
+
+.engineer-page main section.summary::-webkit-scrollbar {
 
     display: none;
+
+}
+
+.engineer-page main section.summary {
+
+    scrollbar-width: none;
+
 }
 
 
 .engineer-page div.card {
     background-color: #fefefe;
-
+    border: 1px solid;
+    box-shadow: 0px 6px 0px rgba(128, 128, 128, 0.051);
     height: 100%;
     border-radius: 10px;
     display: flex;
-    justify-content: center;
-    align-items: center;
 
+    
     transition: 300ms;
 
 }
 
 .engineer-page div.card:hover {
     box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.217);
-    transform: scale(1.05);
+    transform: scale(1.005);
 
     transition: 300ms;
 }
 
-.item1 {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+.summary .item1 {
+   
+    border-color: #da954b;
+    color: #da954b;
 }
 
-.item2 {
-    grid-column: 2 / 2;
-    grid-row: 1 / 2;
+.summary .item2 {
+ 
     transform-origin: left;
+
+    border-color:#78a75a;
+    color: #78a75a;
 }
 
-.item3 {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+.summary .item3 {
+  transform-origin: bottom;
+
+    border-color: #5084c1;
+    color: #5084c1;
 }
 
-.item4 {
-    grid-column: 2 / 2;
-    grid-row: 2 / 3;
-    transform-origin: left;
-}
-
-.item5 {
-    grid-column: 1 / 3;
-    grid-row: 3 / 5;
-
-
+.summary .item4 {
+   
+    transform-origin: left bottom;
+    border-color: #634fa2;
+    color: #634fa2;
 }
 
 
-.card-value {
-    font-size: 24px;
+.engineer-page .summary .itemContent{
+    display: flex;
+    padding: 20px;
+    gap: 15px;
+    flex-direction: column;
+    flex: 1;
+    
 
 }
+.engineer-page .summary .itemContent :is(.start,.center,.end){
+    flex: 1;
+    display: flex;
+    width: 100%;
+}
 
-/* engineer requests section*/
+.engineer-page .summary .itemContent h1 {
+    font-size: clamp(32px,2vw,50px);
+}
+
+.engineer-page .summary .itemContent img{
+    width: 50px;
+    height: 50px;
+    margin-right: auto;
+    align-items: center;
+}
+
+.engineer-page .summary .itemContent span{
+    font-size: clamp(15px , 2vw,50px);
+    font-weight: bold;
+    color: rgb(66, 66, 66);
+    margin: auto;
+   
+}
+
+
+
+
+/* ========================================== */
+/*          ENGINEER REQUEST SECTION          */
+/* ========================================== */
+
 
 .engineer-page section.requests {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     width: 100%;
     height: 100%;
-    margin-top: 10px;
+   gap: 10px;
+    overflow: scroll;
+    padding-bottom: 80px;
+    padding-top: 1px;
+    
 }
 
-.engineer-page section.requests .request-card {
+.engineer-page main section.requests::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+.engineer-page main section.requests {
+
+    scrollbar-width: none;
+
+}
+
+
+
+.request-card  {
     width: 90%;
-    height: 150px;
+   
+    height: calc(100vh - 75vh);
     background-color: #fefefe;
-    border: 1px rgb(220, 220, 220) solid;
-    border-right: 15px rgb(255, 225, 0) solid;
+   
+    border-right: 20px rgb(255, 225, 0) solid;
     border-radius: 10px;
-    box-shadow: 0px 6px 20px rgba(112, 198, 229, 0.217);
-    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    
     display: flex;
     justify-content: start;
     align-items: start;
-    overflow: hidden;
+   
     font-size: clamp(15px, 4vw, 25px);
     padding: 20px;
     transition: 300ms;
+
+    flex-shrink: 0;
 }
 
 .request-card:hover {
     cursor: pointer;
-    transform: scale(1.02);
+    transform: scale(1.01);
     transition: 300ms;
 }
 
-.engineer-page section.requests .request-card .request-content {
+ .request-card .request-content {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 
 }
 
@@ -645,44 +792,220 @@ header nav ul li a:hover , nav ul li button:hover {
 }
 
 .row-center {
-    width: 100%;
+  width: 100%;
 }
 
 .row-end {
     width: 100%;
-    display: flex;
+    display:flex;
+    
 
 }
+.request-title{
 
-.request-counter {
-    flex: 1;
+    font-size:clamp(15px,3vw,50px) ;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.request-title .urgent{
+    font-size: clamp(15px,1vw,25px);
+    color: rgb(254, 253, 253);
+    background-color: red;
+    border-radius: 10px;
+    padding:0px 7px ;
+    height: fit-content;
+
 }
 
 .request-issue {
     flex: 1;
     display: flex;
     justify-content: end;
+    
+    gap:5px;
+    
 
 
+
+}
+.request-issue > :nth-child(n+5){
+    display: none;
+}
+.request-issue div{
+    
+    height: 30px;
+    width: 70px;
+    text-align: center;
+    
+    
+
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f1f3f5; 
+    color: #495057;       
+    font-size: 0.85rem;       
+    font-weight: 500;
+    border-radius: 10px;     
+    border: none;
 
 
 }
 
 
 .request-discreption {
-    width: 50%;
-    text-overflow: ellipsis;
+    width: calc(100vw - 70vw);
+   
+    height: 50px;
+   overflow: scroll;
+   border: 1px gray solid;
+   border-radius: 5px;
+   padding: 10px;
+   font-size:clamp(15px,1.7vw,30px) ;
+   color: rgb(87, 87, 87);
 
 }
 
-.request-card .request-content .request-left {
-    width: 50%;
+.request-card .counter{
+    display: flex;
+    align-items: center;
+    font-size: clamp(10px,1.5vw,25px);
+    color: rgb(88, 87, 87);
+}
+
+.request-card .request-content .request-location {
+   flex: 1;
     display: flex;
 
-    gap: 20px;
+    gap: 30px;
     align-items: end;
     justify-content: end;
+    
 
+}
+
+.request-building , .request-floor, .request-class{
+    display:flex;
+    gap: 5px;
+    font-size: clamp(10px,2vw,35px);
+  
+    
+}
+
+
+
+/* ========================================== */
+/*           ENGINEER TRAINEE SECTION         */
+/* ========================================== */
+
+.engineer-page main .trainee{
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+    padding: 10px;
+    gap: 10px;
+
+}
+
+.engineer-page main .trainee-card{
+    border-right: 20px #5084c1 solid;
+    border-radius: 10px;
+    box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.055);
+
+    
+    padding: 10px;
+    height: calc(100vh - 75vh);
+    width: 90%;
+    flex-shrink: 0;
+
+    transition: 300ms;
+
+}
+.engineer-page main .trainee-card:hover{
+    transform: scale(1.005);
+}
+
+.engineer-page main .trainee-card .card-content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    
+
+    
+}
+
+.engineer-page main .trainee-card .card-content :is(.start,.center,.end){
+    flex: 1;
+    width: 100%;
+    display: flex;
+    gap: 50px;
+
+}
+
+.engineer-page main .trainee-card .center{
+    justify-content: end;
+    align-items: center;
+}
+
+.engineer-page main .trainee-card .center img{
+    width: 70px;
+    height:70px;
+}
+
+.engineer-page main .trainee-card .start{
+    justify-content: start;
+    align-items: start;
+}
+
+.engineer-page main .trainee-card .start .giveButton{
+    border: none;
+    border-radius: 5px;
+    width:80px;
+    height: 40px;
+    background-color: #358ffd;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    transition: 300ms;
+}
+.engineer-page main .trainee-card .start .giveButton:hover{
+    background-color: #2485fc;
+    transition: 300ms;
+}
+.engineer-page main .trainee-card .start .giveButton img{
+    height: 20px;
+    width: 20px;
+}
+.engineer-page main .trainee-card .end {
+    align-items: end;
+}
+.engineer-page main .trainee-card .end .deleteButton{
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(200, 0, 0);
+    color: white;
+    margin:0px  auto ;
+    transition: 300ms;
+}
+
+
+.engineer-page main .trainee-card .end .deleteButton:hover{
+    background-color: rgb(175, 1, 1);
+    transition: 300ms;
 }
 
 
@@ -690,33 +1013,9 @@ header nav ul li a:hover , nav ul li button:hover {
 
 
 
-
-
-
-@media (max-width:768px) {
-
-
-    .engineer-page aside {
-        width: 100%;
-        display: none;
-    }
-
-    .engineer-page main {
-        width: 100%;
-        height: auto;
-
-    }
-
-
-}
-
-
-/* trainer page*/
-
-
-
-
-
+/* ========================================== */
+/*                TRAINER PAGE                */
+/* ========================================== */
 
 .trainer-page {
     max-height: 100vh;
@@ -869,7 +1168,9 @@ header nav ul li a:hover , nav ul li button:hover {
 }
 
 
-/*trainer chat section*/
+/* ========================================== */
+/*             RAINER CHAT SECTION            */
+/* ========================================== */
 
 
 .trainer-page aside .chat {
@@ -990,7 +1291,11 @@ header nav ul li a:hover , nav ul li button:hover {
 
 
 
-/* signin-up page*/
+
+
+/* ========================================== */
+/*               SIGNI-UP PAGE                */
+/* ========================================== */
 
 .signin-up-page main {
     flex: 1;
@@ -1245,11 +1550,220 @@ header nav ul li a:hover , nav ul li button:hover {
 
 
 
+/* ========================================== */
+/*                   DIALOG                   */
+/* ========================================== */
+
+
+dialog .DialogContent{
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+dialog .requestContent{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    gap: 20px;
+    align-items: center;
+    
+}
+dialog .send{
+    height: 10%;
+    display: flex;
+    gap: 10px;
+    
+}
+dialog input{
+    flex: 1;
+    text-indent: 10px;
+    font-size: clamp(10px,1.3vw,40px);
+}
+
+dialog .done,dialog .refuse{
+    border: none;
+    border-radius: 10px;
+    width: 15%;
+    height: 100%;
+
+   
+}
+
+dialog .done{
+
+    background-color: #78a75a;
+    color: white;
+   
+}
+
+dialog .done:hover{
+
+    background-color: #67914d;
+   
+}
+
+dialog .refuse{
+
+    background-color: rgb(197, 42, 42);
+    color: white;
+   
+}
+
+dialog .refuse:hover{
+    background-color: brown;
+    color: white;
+}
 
 
 
+dialog .start{
 
-@media (max-width:768px) {
+display: flex;
+font-size: clamp(20px,1.5vw,36px);
+}
+
+
+dialog .requestContent .issuestag {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: center;
+    gap: 5px;
+    margin-right: auto;
+    font-size: clamp(10px,1.2vw,20px);
+
+    
+}
+
+dialog .requestContent .issuestag span{
+      height: 30px;
+    width: 70px;
+    text-align: center;
+    
+    
+
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f1f3f5; 
+    color: #495057;       
+    font-size: 0.85rem;       
+    font-weight: 500;
+    border-radius: 10px;     
+    border: none;
+    font-size: clamp(10px,1.2vw,20px);
+
+}
+
+dialog .requestContent .below span{
+    font-size: clamp(10px,1.5vw,50px);
+}
+
+#dialogInfo button{
+    border: none;
+    width: 50%;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#dialogInfo .chatButton{
+    background-color: #2485fc;
+ 
+}
+#dialogInfo .chatButton:hover{
+    background-color: #176ed8;
+}
+#dialogInfo .deleteButton{
+    background-color: rgb(220, 28, 28);
+
+}
+
+#dialogInfo .deleteButton:hover{
+     background-color: rgb(186, 22, 22);
+}
+
+
+#dialogGive{
+    width: 70%;
+    height:100%;
+}
+
+#dialogGive2 .giveButton{
+   width: 30%;
+   color: white;
+   background-color: #2485fc;
+   border: none;
+   border-radius: 10px;
+   font-size: clamp(10px,1.3vw,40px);
+}
+
+#dialogGive2 .giveButton:hover{
+    background-color: #176ed8;
+}
+
+
+/* ========================================== */
+/*                MEDIA QUERY                 */
+/* ========================================== */
+@media (max-width:900px) {
+
+      .signup-page main section form div input {
+        min-height: 30px;
+
+
+    }
+
+    .signup-page main section form div button {
+        min-height: 40px;
+    }
+
+     .login-page main section {
+        width: 70%;
+        height: 300px;
+        padding: 10px;
+    }
+
+    .login-page main section form div input {
+        width: 250px;
+        height: 45px;
+        font-size: 15px;
+    }
+
+    .login-page main section form div label {
+        font-size: 15px;
+    }
+
+    .login-page main section form div button {
+        font-size: 15px;
+        width: 250px;
+        height: 45px;
+    }
+
+    /*engineer page*/
+
+    .engineer-page aside {
+        width: 100%;
+        display: none;
+    }
+
+    .engineer-page main {
+        width: 100%;
+        height: auto;
+
+    }
+
+ 
+    /*signin up page*/
+
     .signin-up-page main .card {
         width: 90%;
     }
@@ -1277,6 +1791,7 @@ header nav ul li a:hover , nav ul li button:hover {
 
 @media (max-width:1200px) {
 
+    /*sign in up page*/
 
     .signin-up-page main .signup .button button {
 
@@ -1288,6 +1803,11 @@ header nav ul li a:hover , nav ul li button:hover {
 
         height: 50px;
  
+    }
+
+    /*engineer page*/
+       .engineer-page aside .chat-input {
+        margin-bottom: 70px;
     }
 
 }
