@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
     scrollbar-width: none;
+
+     scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 
@@ -9,17 +12,56 @@
     display: none;
 }
 
+ 
 
-* {
-    scrollbar-width: none;
+
+
+
+html{
+    font-size: 16px;
+   
+}
+
+h1{
+    font-size: clamp(2rem,2vw,10rem);
+    
 }
 
 
-* {
-    -ms-overflow-style: none;
+h3{
+    font-size: clamp(1rem,1.6vw,5rem);
 }
 
+span{
+    font-size: clamp(1rem,1.6vw,5rem);
+}
 
+p{
+    font-size: clamp(1rem,1.6vw,3rem);
+}
+
+a{
+    font-size: clamp(1rem,1.6vw,3rem);
+}
+
+button{
+    font-size: clamp(1rem,1.3vw,3rem);
+}
+
+label{
+    font-size: clamp(1rem,1.3vw,3rem);
+}
+
+input{
+    font-size: clamp(1rem,1.3vw,3rem);
+}
+ 
+
+
+li a,li div{
+    font-size: clamp(1.5rem,1.5vw,5rem);
+    cursor: pointer;
+}
 
 
 body {
@@ -66,24 +108,26 @@ header nav ul li a , nav ul div{
     margin-right: auto;
 }
 
-header nav ul li a , nav ul li button {
+header nav ul li a , nav ul li  div {
     display:flex;
     text-align: center;
     align-items: center;
     text-decoration: none;
     color: rgb(76, 76, 76);
     transition: 300ms;
-    font-size: clamp(15px, 4vw, 25px);
+    /* font-size: clamp(15px, 4vw, 25px); */
     background-color: transparent;
     border: none;
+  
+    text-decoration: none;
+   
  
 }
 
 
-
-header nav ul li a:hover , nav ul li button:hover {
+header nav ul li a:hover , nav ul li div:hover {
     color: black;
-    font-size: calc(clamp(15px, 5vw, 25px) + 10px);
+    font-size: calc(clamp(1.5rem,1.5vw,5rem) + 5px);
     transition: 300ms;
 
 }
@@ -124,7 +168,7 @@ header nav ul li a:hover , nav ul li button:hover {
   */
 
     color: white; 
-    font-size: clamp(50px,2vw,100px);
+    /* font-size: clamp(50px,2vw,100px); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -143,16 +187,7 @@ header nav ul li a:hover , nav ul li button:hover {
     
 
 }
-#goalSection h1{
-    font-size: clamp(30px,3vw,90px);
-   
-}
 
-#goalSection p{
-    font-size: clamp(20px,2vw,50px);
-    
-   
-}
 
 /* ========================================== */
 /*                SIGN-UP PAGE                */
@@ -202,7 +237,7 @@ header nav ul li a:hover , nav ul li button:hover {
 .signup-page main section form div {
     display: flex;
     flex-direction: column;
-    font-size: 10px;
+    /* font-size: 10px; */
     font-weight: bold;
     align-items: center;
     justify-content: center;
@@ -216,14 +251,14 @@ header nav ul li a:hover , nav ul li button:hover {
     margin-top: 2px;
     border: 1px rgb(219, 219, 219) solid;
     border-radius: 5px;
-    font-size: 10px;
+    /* font-size: 10px; */
     text-indent: 5px;
 
 }
 
 .signup-page main section form div label {
     align-self: start;
-    font-size: clamp(15px, 5vw, 18px);
+    /* font-size: clamp(15px, 5vw, 18px); */
 
 }
 
@@ -236,8 +271,8 @@ header nav ul li a:hover , nav ul li button:hover {
     color: white;
     background-color: rgb(0, 140, 255);
     transition: 300ms;
-    font-size: 20px;
-
+    /* font-size: 20px;
+ */
 }
 
 .signup-page main section form div button:hover {
@@ -294,7 +329,7 @@ header nav ul li a:hover , nav ul li button:hover {
 .login-page main section form div {
     display: flex;
     flex-direction: column;
-    font-size: 10px;
+    /* font-size: 10px; */
     font-weight: bold;
     align-items: center;
     margin-top: 15px;
@@ -303,7 +338,7 @@ header nav ul li a:hover , nav ul li button:hover {
 
 .login-page main section form div label {
     align-self: start;
-    font-size: clamp(15px, 5vw, 16px);
+    /* font-size: clamp(15px, 5vw, 16px); */
 
 }
 
@@ -313,7 +348,7 @@ header nav ul li a:hover , nav ul li button:hover {
     margin-top: 2px;
     border: 1px rgb(219, 219, 219) solid;
     border-radius: 5px;
-    font-size: 15px;
+    /* font-size: 15px; */
     text-indent: 5px;
 
 }
@@ -327,8 +362,8 @@ header nav ul li a:hover , nav ul li button:hover {
     color: white;
     background-color: rgb(0, 140, 255);
     transition: 300ms;
-    font-size: 20px;
-
+    /* font-size: 20px;
+ */
 }
 
 .login-page main section form div button:hover {
@@ -345,10 +380,7 @@ header nav ul li a:hover , nav ul li button:hover {
 /* ========================================== */
 /*               ENGINEER PAGE                */
 /* ========================================== */
-.engineer-page {
-    max-height: 100vh;
-    overflow: hidden;
-}
+
 
 .engineer-page header nav ul .profile-img {
 
@@ -372,18 +404,20 @@ header nav ul li a:hover , nav ul li button:hover {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 150px);
+    overflow: hidden;
 
 
 }
 
-.engineer-page aside {
+ aside {
     border: 1px whitesmoke solid;
     border-radius: 10px;
     box-shadow: 0px 6px 20px rgba(74, 196, 249, 0.35);
     width: 35%;
     padding: 20px;
-    overflow: scroll;
+    overflow: hidden;
+   
    
    
 }
@@ -397,10 +431,12 @@ header nav ul li a:hover , nav ul li button:hover {
     flex-direction: column;
 
     align-items: center;
-    flex-grow: 1;
+    flex: 1;
+    overflow: hidden;
+    
 }
 
-.engineer-page dialog {
+dialog {
     margin: auto;
     position: fixed;
     inset: 0;
@@ -416,11 +452,11 @@ header nav ul li a:hover , nav ul li button:hover {
     
 }
 
-.engineer-page dialog::backdrop{
+ dialog::backdrop{
     background-color: rgba(0, 0, 0, 0.504);
 }
 
-.engineer-page dialog .DialogContent{
+ dialog .DialogContent{
     flex: 1;
 
    
@@ -434,7 +470,7 @@ header nav ul li a:hover , nav ul li button:hover {
 /*          ENGINEER CHAT SECTION             */
 /* ========================================== */
 
-aside .trainer{
+ .trainer{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -444,7 +480,7 @@ aside .trainer{
     padding: 10px;
 }
 
-aside .trainer .person-card{
+ .trainer .person-card{
     
     overflow: hidden;
     border: 1px rgba(128, 128, 128, 0.351) solid;
@@ -454,28 +490,30 @@ aside .trainer .person-card{
     width: 100%;
     height: 20%;
     background-color: white;
+    cursor:pointer;
     
 }
 
-aside .trainer div .person-content{
+
+.trainer div .person-content{
     display: flex;
     flex-direction: column;
     height: 100%;
     padding: 10px;
     width: 100%;
     gap: 10px;
-    font-size: clamp(20px,1.3vw,50px);
+    /* font-size: clamp(20px,1.3vw,50px); */
     
 }
-aside .trainer div .person-content :is(h1,p,span){
+ .trainer div .person-content :is(h1,p,span){
     flex: 1 0 ;
     height: 100%;
 
 
 }
 
-aside .trainer div .person-content :is(p,span) {
-   font-size: clamp(10px,1.3vw,50px);
+.trainer div .person-content :is(p,span) {
+   /* font-size: clamp(10px,1.3vw,50px); */
     
     color: rgb(59, 59, 59);
 
@@ -488,6 +526,7 @@ aside .trainer div .person-content :is(p,span) {
     display: none;
     flex-direction: column;
     justify-content: end;
+    overflow: hidden;
 
 
 }
@@ -536,8 +575,9 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
     align-self: end;
     flex-direction: row-reverse;
     margin-top: 10px;
-    font-size: 25px;
-    font-size: clamp(10px,1.3vw,25px);
+    
+    /* font-size: 25px; */
+    /* font-size: clamp(10px,1.3vw,25px); */
 
 
 }
@@ -549,7 +589,7 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
     flex-direction: row;
     margin-top: 10px;
     align-self: start;
-   font-size: clamp(10px,1.3vw,25px);
+   /* font-size: clamp(10px,1.3vw,25px); */
 
 
 
@@ -558,6 +598,7 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
 .chat  .text-time2 h3 {
     background-color: rgb(0, 175, 0);
     color: rgb(255, 255, 255);
+   
 }
 .chat h3 {
     background-color: rgb(248, 248, 248);
@@ -569,36 +610,45 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
 
 .chat  span {
     color: rgb(53, 53, 53);
-    font-size:  clamp(12px,2vw,15px);;
+    /* font-size:  clamp(12px,2vw,15px);; */
     align-self: end;
 
 }
 
 .chat .chat-input {
-    margin-top: 30px;
-    width: 100%;
-    align-self: center;
-    display: flex;
+   
+    width:100%;
+    height: 6%;
+    padding: 10px;
+    overflow: hidden;
+   
+  
+   
     
 
 }
 
 .chat .chat-input input {
-    flex: 1;
-    height: 30px;
+
+    height: 100%;
+    width: 75%;
+  
     border-radius: 5px;
     border: 1px solid rgb(219, 219, 219);
-    padding: 5px;
-    font-size: 15px;
+    text-indent: 10px;
+    /* font-size: 15px; */
 }
+
+
 
 .chat .chat-input button {
     width: 20%;
+    height:100%;
     border: 1px #5ca4f7 solid;
     border-radius: 10px;
     color: white;
     background-color: #328bf9;
-    margin-right: 10px;
+
     transition: 300ms;
 
 }
@@ -612,17 +662,6 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
 }
 
 
-.chat::-webkit-scrollbar {
-
-    display: none;
-
-}
-.chat {
-
-    scrollbar-width: none;
-
-}
-
 
 /* ========================================== */
 /*          ENGINEER SUMMARY SECTION          */
@@ -630,45 +669,36 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
 
 
 .engineer-page main section.summary {
-    display: grid;
-
-
-
-    grid-template-columns: repeat(2, minmax(300px,1fr));
-    
-    grid-template-rows: auto;
     width: 100%;
     height: 100%;
-    margin: 5px;
-    gap: 3px;
-    justify-content: center;
-    align-items: center;
-    padding: 1px;
-   overflow: scroll;
+    padding: 5px;
     
+    box-sizing: border-box;
+    overflow: scroll;
 }
 
-.engineer-page main section.summary::-webkit-scrollbar {
 
-    display: none;
-
+.summaryContainer {
+    display: grid;
+   
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ 
+    grid-auto-rows: minmax(300px, auto); 
+    
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+   
 }
-
-.engineer-page main section.summary {
-
-    scrollbar-width: none;
-
-}
-
 
 .engineer-page div.card {
     background-color: #fefefe;
     border: 1px solid;
     box-shadow: 0px 6px 0px rgba(128, 128, 128, 0.051);
-    height: 100%;
+    
     border-radius: 10px;
     display: flex;
-
+   
     
     transition: 300ms;
 
@@ -725,9 +755,7 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
     width: 100%;
 }
 
-.engineer-page .summary .itemContent h1 {
-    font-size: clamp(32px,2vw,50px);
-}
+
 
 .engineer-page .summary .itemContent img{
     width: 50px;
@@ -737,7 +765,7 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
 }
 
 .engineer-page .summary .itemContent span{
-    font-size: clamp(15px , 2vw,50px);
+    /* font-size: clamp(15px , 2vw,50px); */
     font-weight: bold;
     color: rgb(66, 66, 66);
     margin: auto;
@@ -752,7 +780,7 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
 /* ========================================== */
 
 
-.engineer-page section.requests {
+section.requests {
     display: none;
     flex-direction: column;
     align-items: center;
@@ -765,17 +793,6 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
     
 }
 
-.engineer-page main section.requests::-webkit-scrollbar {
-
-    display: none;
-
-}
-
-.engineer-page main section.requests {
-
-    scrollbar-width: none;
-
-}
 
 
 
@@ -783,6 +800,7 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
     width: 90%;
    
     height: calc(100vh - 75vh);
+
     background-color: #fefefe;
    
     border-right: 20px rgb(255, 225, 0) solid;
@@ -793,7 +811,7 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
     justify-content: start;
     align-items: start;
    
-    font-size: clamp(15px, 4vw, 25px);
+    /* font-size: clamp(15px, 4vw, 25px); */
     padding: 20px;
     transition: 300ms;
 
@@ -819,29 +837,34 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
 .row-start {
     width: 100%;
     display: flex;
-
+    
 }
 
 .row-center {
   width: 100%;
+     flex: 1;
+    flex-shrink: 0;
+    display: flex;
+  align-items: center;
 }
 
 .row-end {
     width: 100%;
     display:flex;
+  
     
 
 }
 .request-title{
 
-    font-size:clamp(15px,3vw,50px) ;
+    /* font-size:clamp(15px,3vw,50px) ; */
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
 .request-title .urgent{
-    font-size: clamp(15px,1vw,25px);
+    /* font-size: clamp(15px,1vw,25px); */
     color: rgb(254, 253, 253);
     background-color: red;
     border-radius: 10px;
@@ -854,9 +877,9 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
     flex: 1;
     display: flex;
     justify-content: end;
-    
     gap:5px;
-    
+    max-width: 50%;
+    margin-right: auto;
 
 
 
@@ -866,20 +889,22 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
 }
 .request-issue div{
     
-    height: 30px;
-    width: 70px;
+ 
+
+   width: 20%;
+  
     text-align: center;
     
     
 
-    padding: 3px;
+   
     display: flex;
     justify-content: center;
     align-items: center;
 
     background-color: #f1f3f5; 
     color: #495057;       
-    font-size: 0.85rem;       
+    /* font-size: 0.85rem;        */
     font-weight: 500;
     border-radius: 10px;     
     border: none;
@@ -890,13 +915,13 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
 
 .request-discreption {
     width: calc(100vw - 70vw);
-   
-    height: 50px;
+  
+    height: 50%;
    overflow: scroll;
    border: 1px gray solid;
    border-radius: 5px;
    padding: 10px;
-   font-size:clamp(15px,1.7vw,30px) ;
+   /* font-size:clamp(15px,1.7vw,30px) ; */
    color: rgb(87, 87, 87);
 
 }
@@ -904,8 +929,13 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
 .request-card .counter{
     display: flex;
     align-items: center;
-    font-size: clamp(10px,1.5vw,25px);
+    /* font-size: clamp(10px,1.5vw,25px); */
     color: rgb(88, 87, 87);
+}
+
+.request-card .orderNum{
+  
+    color: rgb(57, 57, 57);
 }
 
 .request-card .request-content .request-location {
@@ -922,7 +952,7 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
 .request-building , .request-floor, .request-class{
     display:flex;
     gap: 5px;
-    font-size: clamp(10px,2vw,35px);
+    /* font-size: clamp(10px,2vw,35px); */
   
     
 }
@@ -999,11 +1029,11 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
 .engineer-page main .trainee-card .start .giveButton{
     border: none;
     border-radius: 5px;
-    width:80px;
-    height: 40px;
+    width:fit-content;
+    height: fit-content;
     background-color: #358ffd;
     color: white;
-
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1048,10 +1078,7 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
 /*                TRAINER PAGE                */
 /* ========================================== */
 
-.trainer-page {
-    max-height: 100vh;
-    overflow: hidden;
-}
+
 
 .trainer-page header nav ul .profile-img {
 
@@ -1065,6 +1092,8 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
     display: block;
 
 }
+
+
 
 .trainer-page header {
     box-shadow: none;
@@ -1080,240 +1109,74 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
 
 }
 
-.trainer-page aside {
-    border: 1px whitesmoke solid;
-    border-radius: 10px;
-    box-shadow: 0px 6px 20px rgba(74, 196, 249, 0.35);
-    width: 35%;
-    padding: 20px;
-    overflow: scroll;
-}
-
-.trainer-page main {
-
+.trainer-page main{
     display: flex;
     flex-direction: column;
 
     align-items: center;
-    flex-grow: 1;
+    flex: 1;
+    overflow: hidden;
 }
 
-.trainer-page dialog {
-    margin: auto;
-    position: fixed;
-    inset: 0;
-   
-   
-    border: none;
-    border-radius: 10px;
+
+/* ========================================== */
+/*             TRAINER CHAT SECTION            */
+/* ========================================== */
+
+
+.trainer-page .chatSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
     width: 50%;
-    height: 50%;
-    padding: 0px;
-
-    display: none;
-
- 
-    
-}
-
-.trainer-page dialog::backdrop{
-    background-color: rgba(0, 0, 0, 0.504);
-}
-
-.trainer-page dialog #DialogContent{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 16px;
-    
-}
-
-.trainer-page dialog h1{
-    font-size: 50px;
-}
-
-.trainer-page dialog .issues{
-    flex: 1;
-   
-   
-}
-
-.trainer-page dialog  .issues .section{
-    margin-top: 20px;
-}
-
-.trainer-page dialog  .issues .section-title{
-    font-size: 30px;
-}
-
-
-.trainer-page dialog  .issues .section .issue {
-   display: flex;
-   gap: 20px;
-   
-   
-}
-
-.trainer-page dialog  .issues .section .issue button{
-    background-color: rgba(254, 199, 0, 0.301);
-    border: none;
-    border-radius: 10px;
-    font-size: 15px;
-    padding: 5px;
-    width: 90px;
-}
-.trainer-page dialog  .issues .section .issue button.selected{
-    background-color:rgb(255, 227, 42);
-}
-
-
-
-.trainer-page dialog .SendRequest {
-    display: flex;
-   padding-bottom: 10px;
-   gap: 5px;
-}
-
-.trainer-page dialog .SendRequest input{
-   width: 80%;
-   height: 30px;
-   text-indent: 10px;
-   border: 1px gray solid;
-   border-radius: 10px;
-  
-}
-
-.trainer-page dialog .SendRequest button{
-   flex: 1;
-   height: 30px;
-   border: none;
-   border-radius: 10px;
-   background-color:#358ffd;
-   color: white;
-   
-   
-  
-}
-.trainer-page dialog .SendRequest button:hover{
-    background-color: #2485fc;
-}
-
-
-/* ========================================== */
-/*             RAINER CHAT SECTION            */
-/* ========================================== */
-
-
-.trainer-page aside .chat {
-
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-
-
-}
-
-.trainer-page aside .chat-wrapper {
-
+    border-radius: 10px;
+    box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.314);
     overflow: scroll;
+   
+}
+.trainer-page .chatSection #personSection{
+    width: 90%;
+    overflow: hidden;
+}
+.trainer-page .chatSection .chat{
+    flex: 1;
+    width: 100%;
+    height: 100%;
+
 
 }
 
-.trainer-page aside .chat-wrapper::-webkit-scrollbar {
+.trainer-page .chatSection .chat input,.trainer-page .chatSection .chat button{
+    margin-bottom: 20px;
+   
 
+}
+
+
+
+
+
+
+.trainer-page #requestsSection{
     display: none;
 
 }
-
-.trainer-page aside .chat-wrapper {
-
-    scrollbar-width: none;
-
+.trainer-page #requestsSection .title ,
+.trainer-page #requestsInfoSection .title{
+    margin-top: 50px;
+    font-size: clamp(3rem,2vw,5rem);
+}
+.trainer-page #requestsSection .request-card ,
+.trainer-page #requestsInfoSection .request-card{
+    width: 60%;
 }
 
-.trainer-page aside .text-time {
-    display: flex;
-    
-    align-self: end;
-    flex-direction: row-reverse;
-    margin-top: 10px;
-
-
+.trainer-page #requestsInfoSection .request-card{
+  
+  border-color: green;
 }
-
-.trainer-page aside .text-time2 {
-    display: flex;
-
-
-    flex-direction: row;
-    margin-top: 10px;
-    align-self: start;
-
-
-
-}
-
-.trainer-page aside .text-time2 h3 {
-    background-color: rgb(0, 175, 0);
-    color: rgb(255, 255, 255);
-}
-
-.trainer-page aside h3 {
-    background-color: rgb(248, 248, 248);
-    border: 1px solid rgb(219, 219, 219);
-    border-radius: 15px;
-    color: rgb(42, 42, 42);
-    padding: 10px;
-    font-size:clamp(15px,1.6vw,50px)
-    
-}
-
-.trainer-page aside span {
-    color: rgb(53, 53, 53);
-    font-size: 12px;
-    align-self: end;
-
-}
-
-.trainer-page aside .chat-input {
-    margin-top: 30px;
-    width: 100%;
-    align-self: center;
-    display: flex;
-
-}
-
-.trainer-page aside .chat-input input {
-    flex: 1;
-    height: 30px;
-    border-radius: 5px;
-    border: 1px solid rgb(219, 219, 219);
-    padding: 5px;
-    font-size: 15px;
-}
-
-.trainer-page aside .chat-input button {
-    width: 20%;
-    border: 1px #5ca4f7 solid;
-    border-radius: 10px;
-    color: white;
-    background-color: #328bf9;
-    margin-right: 10px;
-    transition: 300ms;
-
-}
-
-.trainer-page aside .chat-input button:hover {
-
-    background-color: #2485fc;
-
-
-
-}
-
-
-
 
 
 
@@ -1407,14 +1270,11 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
 
 
 
-.signin-up-page .signup h1 {
-    font-size: clamp(40px, 4vw, 75px);
 
-}
 
 .signin-up-page .signup label {
     align-items: start;
-    font-size: clamp(15px, 1.7vw, 30px);
+    /* font-size: clamp(15px, 1.7vw, 30px); */
 
 }
 
@@ -1422,7 +1282,7 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
     width: 100%;
     height: 100%;
     text-indent: 10px;
-    font-size: clamp(15px, 1.3vw, 30px);
+    /* font-size: clamp(15px, 1.3vw, 30px); */
     border: 1px gray solid;
     border-radius: 10px;
 }
@@ -1431,7 +1291,7 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
     width: 70%;
     display: flex;
     align-items: start;
-    font-size: clamp(15px, 1.3vw, 30px);
+    /* font-size: clamp(15px, 1.3vw, 30px); */
 
 }
 
@@ -1459,7 +1319,7 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
     background-color: rgb(0, 166, 255);
     border: none;
     border-radius: 10px;
-    font-size: clamp(15px, 1.3vw, 30px);
+    /* font-size: clamp(15px, 1.3vw, 30px); */
 
 
 }
@@ -1510,9 +1370,7 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
 
 }
 
-.signin-up-page .signin .title {
-    font-size: clamp(15px, 2vw, 75px);
-}
+
 
 .signin-up-page .signin .align-label {
     display: flex;
@@ -1523,18 +1381,26 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
 .signin-up-page .signin .align-input {
     display: flex;
     width: 70%;
+    height: 80%;
     justify-content: center;
 
 }
 
-.signin-up-page .signin form label {
-    font-size: clamp(15px, 1.5vw, 30px);
+.passwordShow{
+    
+    position: absolute;
+    right: 61%;
+   
+    cursor: pointer;
 }
 
+
+
 .signin-up-page .signin form input {
-    font-size: clamp(15px, 1.3vw, 30px);
+    /* font-size: clamp(15px, 1.3vw, 30px); */
     width: 100%;
-    height: 40px;
+    height: 100%;
+    min-height: 35px;
     border: 1px gray solid;
     border-radius: 10px;
     text-indent: 10px;
@@ -1548,7 +1414,7 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
 }
 
 .signin-up-page .signin form .signin-button {
-    font-size: clamp(15px, 1.3vw, 30px);
+    /* font-size: clamp(15px, 1.3vw, 30px); */
     width: 70%;
     height: clamp(20px,4vw,500px);
     color: white;
@@ -1566,7 +1432,7 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
 }
 
 .signin-up-page .signin form .signup-button {
-    font-size: clamp(15px, 1.3vw, 30px);
+    /* font-size: clamp(15px, 1.3vw, 30px); */
     width:30%;
     height: clamp(20px,4vw,500px);
     color: white;
@@ -1580,6 +1446,67 @@ box-shadow: 0px 6px 20px rgba(128, 128, 128, 0.071);
 }
 
 
+/* ========================================== */
+/*                   TRAINEE                   */
+/* ========================================== */
+
+
+
+
+.trainee-page header nav ul .profile-img {
+
+    margin-right: auto;
+
+}
+
+.trainee-page header nav ul li a img {
+    width: 40px;
+    height: 40px;
+    display: block;
+
+}
+
+.trainee-page header {
+    box-shadow: none;
+
+}
+
+.trainee-page .container {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    height: calc(100vh - 70px);
+
+
+}
+
+ aside {
+    border: 1px whitesmoke solid;
+    border-radius: 10px;
+    box-shadow: 0px 6px 20px rgba(74, 196, 249, 0.35);
+    width: 35%;
+    padding: 20px;
+    overflow: scroll;
+   
+   
+}
+
+.trainee-page main {
+
+
+
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    flex: 1;
+    
+}
+
+.trainee-page .requests{
+    display:flex;
+}
 
 /* ========================================== */
 /*                   DIALOG                   */
@@ -1611,7 +1538,7 @@ dialog .send{
 dialog input{
     flex: 1;
     text-indent: 10px;
-    font-size: clamp(10px,1.3vw,40px);
+    /* font-size: clamp(10px,1.3vw,40px); */
 }
 
 dialog .done,dialog .refuse{
@@ -1653,7 +1580,7 @@ dialog .refuse:hover{
 dialog .start{
 
 display: flex;
-font-size: clamp(20px,1.5vw,36px);
+/* font-size: clamp(20px,1.5vw,36px); */
 }
 
 
@@ -1666,7 +1593,7 @@ dialog .requestContent .issuestag {
     align-items: center;
     gap: 5px;
     margin-right: auto;
-    font-size: clamp(10px,1.2vw,20px);
+    /* font-size: clamp(10px,1.2vw,20px); */
 
     
 }
@@ -1685,17 +1612,15 @@ dialog .requestContent .issuestag span{
 
     background-color: #f1f3f5; 
     color: #495057;       
-    font-size: 0.85rem;       
+    /* font-size: 0.85rem;        */
     font-weight: 500;
     border-radius: 10px;     
     border: none;
-    font-size: clamp(10px,1.2vw,20px);
+    /* font-size: clamp(10px,1.2vw,20px); */
 
 }
 
-dialog .requestContent .below span{
-    font-size: clamp(10px,1.5vw,50px);
-}
+
 
 #dialogInfo button{
     border: none;
@@ -1734,18 +1659,111 @@ dialog .requestContent .below span{
    background-color: #2485fc;
    border: none;
    border-radius: 10px;
-   font-size: clamp(10px,1.3vw,40px);
+   /* font-size: clamp(10px,1.3vw,40px); */
 }
 
 #dialogGive2 .giveButton:hover{
     background-color: #176ed8;
 }
 
+.trainer-page  #dialogRequests .cancel ,
+.trainer-page  #dialogRequests .openChat{
+    border: none;
+    border-radius: 10px;
+    height: 45px;
+    color: white;
+  
+}
+
+.trainer-page  #dialogRequests .cancel {
+    background-color: rgb(204, 46, 46);
+    width: 20%;
+}
+
+.trainer-page  #dialogRequests .openChat{
+    background-color: #328bf9;
+    flex: 1;
+}
+
+
+.trainer-page  #dialogRequests .cancel:hover {
+    background-color: rgb(179, 33, 33);
+    
+}
+
+.trainer-page  #dialogRequests .openChat:hover{
+    background-color: #2485fc;
+    
+}
+
+.trainer-page  #addRequest .add{
+  border: none;
+  border-radius: 10px;
+  width: 20%;
+  background-color: #328bf9;
+  color: white;
+}
+
+.trainer-page #addRequest .requestContent .center{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-left: auto;
+    width: 100%;
+}
+
+.trainer-page #addRequest .requestContent .end{
+    margin-left: auto;
+}
+
+.trainer-page #addRequest .requestContent .issues{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    width: 100%;
+}
+
+.trainer-page #addRequest .requestContent .issuesTags{
+    display: flex;
+   flex: 1;
+    gap: 10px;
+    flex-wrap: wrap;
+   
+    width: 70%;
+    
+}
+
+
+
+.trainer-page #addRequest .requestContent .issuesTags button{
+    background-color: #f1f3f5; 
+    color: #495057;  
+    border: none;
+    border-radius: 10px;
+    min-width: 20%;
+    flex-shrink: 0;
+    /* font-size: 20px; */
+    height: 40px;
+    
+}
 
 /* ========================================== */
 /*                MEDIA QUERY                 */
 /* ========================================== */
 @media (max-width:900px) {
+
+  
+    #goalSection{
+        
+        
+        
+        width: 100%;
+    }
+    li a,li div{
+    font-size: clamp(0.8rem,1.5vw,5rem);
+    cursor: pointer;
+    }
 
       .signup-page main section form div input {
         min-height: 30px;
@@ -1766,15 +1784,13 @@ dialog .requestContent .below span{
     .login-page main section form div input {
         width: 250px;
         height: 45px;
-        font-size: 15px;
+        /* font-size: 15px; */
     }
 
-    .login-page main section form div label {
-        font-size: 15px;
-    }
+   
 
     .login-page main section form div button {
-        font-size: 15px;
+        /* font-size: 15px; */
         width: 250px;
         height: 45px;
     }
@@ -1837,8 +1853,6 @@ dialog .requestContent .below span{
     }
 
     /*engineer page*/
-       .engineer-page aside .chat-input {
-        margin-bottom: 70px;
-    }
+    
 
 }

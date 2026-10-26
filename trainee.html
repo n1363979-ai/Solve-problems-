@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="Javascript/trainee.js" defer></script>
+    <title>trainee</title>
+</head>
+
+<body dir="rtl" class="trainee-page">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+            
+                <li><div id="ordersButton">الطلبات</div></li>
+                
+                <li class="profile-img"><a href=""><img src="images/icons8-profile-100.png" alt="الملف الشخصي"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <aside>
+            <section class="trainer" id="personSection">
+                <div class="person-card cardButton" >
+                    <div class="person-content">
+                       <h1>فهد
+                        <span >رقم الطلب 2</span>
+                       </h1>
+                   
+                   <p>الجهاز عليه رمز وهذا رمز الجهاز abc111</p>
+                    
+
+                    </div>
+                </div>
+                <div class="person-card cardButton" >
+                    <div class="person-content">
+                       <h1>خالد
+                        <span >رقم الطلب 12</span>
+                       </h1>
+                   
+                   <p>عندي مشكله بالنت </p>
+                 
+                    </div>
+                </div>
+               
+            </section>
+            <section class="chat" id="chat">
+                <div class="goBack" id="goBack">
+                    <button><img src="images/goback.svg" alt=""></button>
+                </div>
+               <div class="chat-wrapper">
+                <div class="text-time">
+                    <h3>السلام عليكم عندي مشكله</h3>
+                    <span>5pm</span>
+                </div>
+
+                  <div class="text-time2">
+                    <h3>وعليكم السلام وش مشكلتك؟</h3>
+                    <span>5pm</span>
+                </div>
+
+                
+                 
+
+                </div>
+              
+                 <form class="chat-input formNoReaload" >
+                    <input type="text">
+                     <button type="submit" title="ارسال">
+                        ارسال
+                     </button>
+
+                    </form>
+               
+            </section>
+        </aside>
+
+        <main>
+
+
+           
+
+            <section class="requests" id="requestsSection"      >
+
+                <div class="request-card dialogButton" id="RequestCard" style="border-color: red; " data-target="dialogRequests">
+                    <div class="request-content">
+
+                        <div class="row-start">
+                            <div class="request-title">
+                                 <h1>طلب صيانه</h1>
+                                 <span class="orderNum">#2</span>
+                                 <span class="urgent">عاجل</span>
+                            </div>
+                          
+
+                            <div class="request-issue">
+                                <div class="issue"><span>انترنت</span></div>
+                                <div class="issue"><span>تعليق</span></div>
+                                <div class="issue"><span>قديم</span></div>
+                                <div class="issue"><span>w10</span></div>
+                                <div class="issue"><span>انترنت</span></div>
+                                
+                            </div>
+
+                        </div>
+                        <div class="row-center">
+                             <div class="request-discreption">
+                                <span>واجهتني مشكله في الانترنت مشكلتي في الكيابل و الايثر نت بعض الكيابل مقطوعه وبعضها مفصول اجهتني مشكله في الانترنت مشكلتي في الكيابل و الايثر نت بعض الكيابل مقطوعه وبعضها مفصول </span>
+                            </div>
+                        </div>
+                        
+                        <div class="row-end">
+                           <div class="counter">
+                            <span>منذ 5 أيام</span>
+                           </div>
+
+                            <div class="request-location">
+                                <div class="request-building">
+                                    <img src="images/building.svg">
+                                    <span>2</span>
+                                </div>
+                                <div class="request-floor">
+                                    
+                               <img src="images/floor.svg">
+                                    <span >3</span>
+                                </div>
+                                <div class="request-class">
+
+                                     <img src="images/table.svg">
+
+                                    <span>23</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                   <div class="request-card dialogButton" id="RequestCard" data-target="dialogRequests">
+                    <div class="request-content">
+
+                        <div class="row-start">
+                            <div class="request-title">
+                                
+                                 <h1>طلب صيانه</h1>
+                                 <span class="orderNum">#12</span>
+                            </div>
+                          
+
+                             <div class="request-issue">
+                                <div class="issue"><span>انترنت</span></div>
+                                <div class="issue"><span>تعليق</span></div>
+                                <div class="issue"><span>قديم</span></div>
+                                <div class="issue"><span>w10</span></div>
+                                <div class="issue"><span>انترنت</span></div>
+                                
+                            </div>
+
+                        </div>
+                        <div class="row-center">
+                             <div class="request-discreption">
+                                <span>واجهتني مشكله في الانترنت...</span>
+                            </div>
+                        </div>
+                        
+                        <div class="row-end">
+                           <div class="counter">
+                            <span>منذ 5 أيام</span>
+                           </div>
+
+                            <div class="request-location">
+                                <div class="request-building">
+                                    <img src="images/building.svg">
+                                    <span>2</span>
+                                </div>
+                                <div class="request-floor">
+                                    
+                               <img src="images/floor.svg">
+                                    <span >3</span>
+                                </div>
+                                <div class="request-class">
+
+                                     <img src="images/table.svg">
+
+                                    <span>23</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                  
+                
+
+
+
+
+
+
+            </section>
+
+            
+
+        </main>
+    </div>
+
+    <footer>
+
+    </footer>
+
+    <dialog class="dialogclose" id="dialogRequests">
+        <div class="DialogContent">
+            <div class="requestContent">
+                <div class="start">
+                    <h1>طلب صيانة</h1>
+                    <div class="issuestag">
+                            <span>انترنت</span>
+                            <span>تعليق</span>
+                            <span>قديم</span>
+                            <span>w10</span>
+                            <span>انترنت</span>
+                             <span>انترنت</span>
+                            <span>تعليق</span>
+                            <span>قديم</span>
+                            <span>w10</span>
+                            <span>انترنت</span>
+                    </div>
+                </div>
+                <div class="below">
+<span>عندي مشكله بالنت والاجهزه قديمه و نظامها قديم وندوز 7 ايضا اواجه مشكله بالاجهزه الجديده مرات يعلق الجهاز ابي منكم تبدلون الاجهزه القديمه والاجهزه الجديده تسوون لها فورمات وتثبيت للبرامج </span>
+                </div>
+
+
+            </div>
+            <form class="send formNoReaload">
+                <input type="text" placeholder="الوصف">
+                <button type="submit" class="done">تم الانجاز</button>
+                <button type="button" class="refuse">رفض</button>
+            </form>
+        </div>
+  
+    </dialog>
+
+    
+
+    
+    
+  
+
+    
+</body>
+
+</html>

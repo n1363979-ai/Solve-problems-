@@ -1,3 +1,5 @@
+console.log("this is engineer js")
+
 const personSection = document.getElementById("personSection")
 const cardButton = document.querySelectorAll(".cardButton")
 
@@ -15,6 +17,12 @@ const traineeB=document.getElementById("traineeButton")
 
 const dialogB=document.querySelectorAll(".dialogButton")
 const dialogclose=document.querySelectorAll(".dialogclose")
+
+const form = document.querySelectorAll(".send")
+
+form.forEach(form =>{
+    
+})
 
 cardButton.forEach(card =>{
     card.addEventListener("click",(e)=>{

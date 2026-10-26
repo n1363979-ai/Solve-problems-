@@ -19,6 +19,12 @@ const SignupButton = document.getElementById("signup-button");
 
 
 
+// const password = document.getElementById("signupPassowrd")
+// const passwordShow= document.getElementsByClassName(".passwordShow")
+
+// passwordShow.onclick = function(){
+//     password.style.backgroundColor=("red")
+// }
 
 
    

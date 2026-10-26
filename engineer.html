@@ -14,9 +14,9 @@
         <nav>
             <ul>
                 <li><a href="index.html">الرئيسية</a></li>
-               <li><button id="summaryButton">الملخص</button></li>
-                <li><button id="ordersButton">الطلبات</button></li>
-                 <li><button id="traineeButton">المتدربين</button></li>
+               <li><div id="summaryButton">الملخص</div></li>
+                <li><div id="ordersButton">الطلبات</div></li>
+                 <li><div id="traineeButton">المتدربين</div></li>
                 <li class="profile-img"><a href=""><img src="images/icons8-profile-100.png" alt="الملف الشخصي"></a></li>
             </ul>
         </nav>
@@ -69,21 +69,23 @@
 
                 </div>
               
-                 <div class="chat-input">
+                 <form class="chat-input formNoReaload">
                     <input type="text">
                      <button type="submit" title="ارسال">
                         ارسال
                      </button>
 
-                </div>
+                    </form>
                
             </section>
         </aside>
 
         <main>
+
+
             <section class="summary" id="summarySection">
-             
-                <div class="card item1">
+             <div class="summaryContainer">
+                <div class="card item1" >
                     <div class="itemContent">
                         <div class="start">
                             <h1>عدد الطلبات</h1>
@@ -133,7 +135,7 @@
                     </div>
                 </div>
               
-
+                </div>
             </section>
 
             <section class="requests" id="requestsSection">
@@ -143,7 +145,8 @@
 
                         <div class="row-start">
                             <div class="request-title">
-                                 <span>طلب صيانه</span>
+                                 <h1>طلب صيانه</h1>
+                                 <span class="orderNum">#2</span>
                                  <span class="urgent">عاجل</span>
                             </div>
                           
@@ -198,7 +201,9 @@
 
                         <div class="row-start">
                             <div class="request-title">
-                                 <span>طلب صيانه</span>
+                                
+                                 <h1>طلب صيانه</h1>
+                                 <span class="orderNum">#12</span>
                             </div>
                           
 
@@ -247,113 +252,7 @@
                     </div>
                 </div>
 
-                   <div class="request-card dialogButton" id="RequestCard" data-target="dialogRequests">
-                    <div class="request-content">
-
-                        <div class="row-start">
-                            <div class="request-title">
-                                 <span>طلب صيانه</span>
-                            </div>
-                          
-   <div class="request-issue">
-                                <div class="issue"><span>انترنت</span></div>
-                                <div class="issue"><span>تعليق</span></div>
-                                <div class="issue"><span>قديم</span></div>
-                                <div class="issue"><span>w10</span></div>
-                                <div class="issue"><span>انترنت</span></div>
-                                
-                            </div>
-
-                        </div>
-                        <div class="row-center">
-                             <div class="request-discreption">
-                                <span>واجهتني مشكله في الانترنت...</span>
-                            </div>
-                        </div>
-                        
-                        <div class="row-end">
-                           <div class="counter">
-                            <span>منذ 5 أيام</span>
-                           </div>
-
-                            <div class="request-location">
-                                <div class="request-building">
-                                    <img src="images/building.svg">
-                                    <span>2</span>
-                                </div>
-                                <div class="request-floor">
-                                    
-                               <img src="images/floor.svg">
-                                    <span >3</span>
-                                </div>
-                                <div class="request-class">
-
-                                     <img src="images/table.svg">
-
-                                    <span>23</span>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
-                   <div class="request-card dialogButton" id="RequestCard" data-target="dialogRequests">
-                    <div class="request-content">
-
-                        <div class="row-start">
-                            <div class="request-title">
-                                 <span>طلب صيانه</span>
-                            </div>
-                          
-
-                            <div class="request-issue">
-                                <div class="issue"><span>انترنت</span></div>
-                                <div class="issue"><span>تعليق</span></div>
-                                <div class="issue"><span>قديم</span></div>
-                                <div class="issue"><span>w10</span></div>
-                                <div class="issue"><span>انترنت</span></div>
-                                
-                            </div>
-
-                        </div>
-                        <div class="row-center">
-                             <div class="request-discreption">
-                                <span>واجهتني مشكله في الانترنت...</span>
-                            </div>
-                        </div>
-                        
-                        <div class="row-end">
-                           <div class="counter">
-                            <span>منذ 5 أيام</span>
-                           </div>
-
-                            <div class="request-location">
-                                <div class="request-building">
-                                    <img src="images/building.svg">
-                                    <span>2</span>
-                                </div>
-                                <div class="request-floor">
-                                    
-                               <img src="images/floor.svg">
-                                    <span >3</span>
-                                </div>
-                                <div class="request-class">
-
-                                     <img src="images/table.svg">
-
-                                    <span>23</span>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
+                  
                 
 
 
@@ -415,11 +314,11 @@
 
 
             </div>
-            <div class="send">
+            <form class="send">
                 <input type="text" placeholder="الوصف">
-                <button class="done">تم الانجاز</button>
-                <button class="refuse">رفض</button>
-            </div>
+                <button type="submit" class="done">تم الانجاز</button>
+                <button type="button" class="refuse">رفض</button>
+            </form>
         </div>
   
     </dialog>
@@ -570,11 +469,11 @@
 
 
             </div>
-            <div class="send">
+            <form class="send">
                 <input type="text" placeholder="الوصف">
                 <button class="giveButton">إيكال المهمة</button>
                 
-            </div>
+            </form>
         </div>
   
     </dialog>

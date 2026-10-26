@@ -1,91 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>trainer</title>
+    <script src="Javascript/trainer.js" defer></script>
+    <title>المدرب</title>
 </head>
-<body dir="rtl" class="trainer-page">
+
+<body class="trainer-page" dir="rtl">
     <header>
         <nav>
             <ul>
                 <li><a href="index.html">الرئيسية</a></li>
-                <li><button id="AddRequestButton">اضافة طلب</button></li>
-                 <li><button >طلبات منجزة</button></li>
+                 <li><div class="showSection" data-target="chatSectionn">المحادثة</div></li>
+                <li><div class="dialogButton" data-target="addRequest">إضافة طلب</div></li>
+                <li><div class="showSection" data-target="requestsSection">الطلبات</div></li>
+                <li><div class="showSection" data-target="requestsInfoSection">حالة الطلب</div></li>
                 <li class="profile-img"><a href=""><img src="images/icons8-profile-100.png" alt="الملف الشخصي"></a></li>
             </ul>
         </nav>
     </header>
 
+    
+       
 
-    <div class="container">
-        <aside>
-            <section class="chat">
-               <div class="chat-wrapper">
-                <div class="text-time">
-                    <h3>السلام عليكم عندي مشكله</h3>
-                    <span>5pm</span>
+        <main>
+             <section class="chatSection" id="chatSectionn">
+            <section class="trainer" id="personSection">
+                <div class="person-card cardButton">
+                    <div class="person-content">
+                        <h1>فهد
+                            <span>رقم الطلب 2</span>
+                        </h1>
+
+                        <p>الجهاز عليه رمز وهذا رمز الجهاز abc111</p>
+
+
+                    </div>
+                </div>
+                <div class="person-card cardButton">
+                    <div class="person-content">
+                        <h1>خالد
+                            <span>رقم الطلب 12</span>
+                        </h1>
+
+                        <p>عندي مشكله بالنت </p>
+
+                    </div>
                 </div>
 
-                  <div class="text-time2">
-                    <h3>وعليكم السلام وش مشكلتك؟</h3>
-                    <span>5pm</span>
-                </div>
-                 
-
-                </div>
-              
-                 <div class="chat-input">
-                    <input type="text">
-                     <button type="submit" title="ارسال">
-                        ارسال
-                     </button>
-
-                </div>
-               
             </section>
-        </aside>
+            <section class="chat" id="chat">
+                <div class="goBack" id="goBack">
+                    <button><img src="images/goback.svg" alt=""></button>
+                </div>
+                <div class="chat-wrapper">
+                    <div class="text-time">
+                        <h3>السلام عليكم عندي مشكله</h3>
+                        <span>5pm</span>
+                    </div>
 
-        <main> </main>
+                    <div class="text-time2">
+                        <h3>وعليكم السلام وش مشكلتك؟</h3>
+                        <span>5pm</span>
+                    </div>
+
+
+
+
+                </div>
+             
+                <form class="chat-input formNoReaload">
+                   
+                    <input type="text">
+                    <button type="submit" title="ارسال">
+                        ارسال
+                    </button>
+                
+                </form>
+                
+
+            </section>
+        </section>
+
+            <section class="requests" id="requestsSection">
+                <h1 class="title">الطلبات الحالية</h1>
+                <div class="request-card trainerRCard dialogButton" id="RequestCard" style="border-color: red; "
+                    data-target="dialogRequests">
+
+                    <div class="request-content">
+
+                        <div class="row-start">
+                            <div class="request-title">
+
+                                <h1>طلب صيانه</h1>
+                                <span class="orderNum">#2</span>
+                                <span class="urgent">عاجل</span>
+
+                            </div>
+
+
+                            <div class="request-issue">
+                                <div class="issue"><span>انترنت</span></div>
+                                <div class="issue"><span>تعليق</span></div>
+                                <div class="issue"><span>قديم</span></div>
+                                <div class="issue"><span>w10</span></div>
+                                <div class="issue"><span>انترنت</span></div>
+
+                            </div>
+
+                        </div>
+                        <div class="row-center">
+                            <div class="request-discreption">
+                                <span>واجهتني مشكله في الانترنت مشكلتي في الكيابل و الايثر نت بعض الكيابل مقطوعه وبعضها
+                                    مفصول اجهتني مشكله في الانترنت مشكلتي في الكيابل و الايثر نت بعض الكيابل مقطوعه
+                                    وبعضها مفصول </span>
+                            </div>
+                        </div>
+
+                        <div class="row-end">
+                            <div class="counter">
+                                <span>منذ 5 أيام</span>
+                            </div>
+
+                            <div class="request-location">
+                                <div class="request-building">
+                                    <img src="images/building.svg">
+                                    <span>2</span>
+                                </div>
+                                <div class="request-floor">
+
+                                    <img src="images/floor.svg">
+                                    <span>3</span>
+                                </div>
+                                <div class="request-class">
+
+                                    <img src="images/table.svg">
+
+                                    <span>23</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="request-card trainerRCard dialogButton" id="RequestCard" data-target="dialogRequests">
+                    <div class="request-content">
+
+                        <div class="row-start">
+                            <div class="request-title">
+                                <h1>طلب صيانه</h1>
+                                <span class="orderNum">#12</span>
+                            </div>
+
+
+                            <div class="request-issue">
+                                <div class="issue"><span>انترنت</span></div>
+                                <div class="issue"><span>تعليق</span></div>
+                                <div class="issue"><span>قديم</span></div>
+                                <div class="issue"><span>w10</span></div>
+                                <div class="issue"><span>انترنت</span></div>
+
+                            </div>
+
+                        </div>
+                        <div class="row-center">
+                            <div class="request-discreption">
+                                <span>واجهتني مشكله في الانترنت...</span>
+                            </div>
+                        </div>
+
+                        <div class="row-end">
+                            <div class="counter">
+                                <span>منذ 5 أيام</span>
+                            </div>
+
+                            <div class="request-location">
+                                <div class="request-building">
+                                    <img src="images/building.svg">
+                                    <span>2</span>
+                                </div>
+                                <div class="request-floor">
+
+                                    <img src="images/floor.svg">
+                                    <span>3</span>
+                                </div>
+                                <div class="request-class">
+
+                                    <img src="images/table.svg">
+
+                                    <span>23</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                
+                
+
+
+
+
+
+
+
+
+            </section>
+            <section class="requests" id="requestsInfoSection">
+                <h1 class="title">حالة الطلب</h1>
+                <div class="request-card dialogButton" id="RequestCard" style="border-color: red; "
+                    data-target="dialogRInfo" >
+
+                    <div class="request-content">
+
+                        <div class="row-start">
+                            <div class="request-title">
+
+                                <h1 style="color: red;">تم الرفض</h1>
+                           
+
+                            </div>
+
+
+                            <div class="request-issue">
+                                <div class="issue"><span>انترنت</span></div>
+                                <div class="issue"><span>تعليق</span></div>
+                                <div class="issue"><span>قديم</span></div>
+                                <div class="issue"><span>w10</span></div>
+                                <div class="issue"><span>انترنت</span></div>
+
+                            </div>
+
+                        </div>
+                        <div class="row-center">
+                            <div class="request-discreption">
+                                <span>واجهتني مشكله في الانترنت مشكلتي في الكيابل و الايثر نت بعض الكيابل مقطوعه وبعضها
+                                    مفصول اجهتني مشكله في الانترنت مشكلتي في الكيابل و الايثر نت بعض الكيابل مقطوعه
+                                    وبعضها مفصول </span>
+                            </div>
+                        </div>
+
+                        <div class="row-end">
+                            <div class="counter">
+                                <span>منذ 5 أيام</span>
+                            </div>
+
+                            <div class="request-location">
+                                <div class="request-building">
+                                    <img src="images/building.svg">
+                                    <span>2</span>
+                                </div>
+                                <div class="request-floor">
+
+                                    <img src="images/floor.svg">
+                                    <span>3</span>
+                                </div>
+                                <div class="request-class">
+
+                                    <img src="images/table.svg">
+
+                                    <span>23</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="request-card dialogButton" id="RequestCard" data-target="dialogRInfo">
+                    <div class="request-content">
+
+                        <div class="row-start">
+                            <div class="request-title">
+                                <h1 style="color: rgb(2, 172, 2);">تمت الصيانة</h1>
+                            </div>
+
+
+                            <div class="request-issue">
+                                <div class="issue"><span>انترنت</span></div>
+                                <div class="issue"><span>تعليق</span></div>
+                                <div class="issue"><span>قديم</span></div>
+                                <div class="issue"><span>w10</span></div>
+                                <div class="issue"><span>انترنت</span></div>
+
+                            </div>
+
+                        </div>
+                        <div class="row-center">
+                            <div class="request-discreption">
+                                <span>واجهتني مشكله في الانترنت...</span>
+                            </div>
+                        </div>
+
+                        <div class="row-end">
+                            <div class="counter">
+                                <span>منذ 5 أيام</span>
+                            </div>
+
+                            <div class="request-location">
+                                <div class="request-building">
+                                    <img src="images/building.svg">
+                                    <span>2</span>
+                                </div>
+                                <div class="request-floor">
+
+                                    <img src="images/floor.svg">
+                                    <span>3</span>
+                                </div>
+                                <div class="request-class">
+
+                                    <img src="images/table.svg">
+
+                                    <span>23</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+            </section>
+        </main>
+
+
+
+  
     <footer></footer>
 
-    <dialog id="Dialog">
-        <div id="DialogContent">
-            <div class="issues">
-            <h1 class="title">طلب صيانة</h1>
-            <div class="section">
-                <h2 class="section-title">الاعطال</h2>
-                <div class="issue">
-                <button id="selected">إنترنت</button>
-                <button >تعليق</button>
-                <button >مجال</button>
-                <button >تثبيت</button>
-                </div>
-            </div>
 
-                 <div class="section" style="margin-top: 50px;">
-                <h2 class="section-title">النظام</h2>
-                <div class="issue">
-                <button id="selected" style="background-color: rgba(69, 108, 248, 0.504);">windos10</button>
-                <button  style="background-color: rgba(69, 108, 248, 0.504);">windos9</button>
-                <button  style="background-color: rgba(69, 108, 248, 0.504);">windos8</button>
-                <button  style="background-color: rgba(69, 108, 248, 0.504);">windos7</button>
+    <dialog class="dialogclose" id="dialogRequests">
+        <div class="DialogContent">
+            <div class="requestContent">
+                <div class="start">
+                    <h1>طلب صيانة</h1>
+                    <div class="issuestag">
+                        <span>انترنت</span>
+                        <span>تعليق</span>
+                        <span>قديم</span>
+                        <span>w10</span>
+                        <span>انترنت</span>
+                        <span>انترنت</span>
+                        <span>تعليق</span>
+                        <span>قديم</span>
+                        <span>w10</span>
+                        <span>انترنت</span>
+                    </div>
                 </div>
-            </div>
-            </div>
+                <div class="below">
+                    <span>عندي مشكله بالنت والاجهزه قديمه و نظامها قديم وندوز 7 ايضا اواجه مشكله بالاجهزه الجديده مرات
+                        يعلق الجهاز ابي منكم تبدلون الاجهزه القديمه والاجهزه الجديده تسوون لها فورمات وتثبيت للبرامج
+                    </span>
+                </div>
 
-     
-            <div class="SendRequest">
-                <input type="text" placeholder="الوصف">
-                <button type="submit" >إرسال</button>
+
+            </div>
+            <div class="send">
+
+                <button class="cancel">الغاء</button>
+                <button class="openChat">فتح محادثة</button>
             </div>
         </div>
 
     </dialog>
 
 
-    <script src="Javascript/trainer.js"></script>
+
+    <!-- trainer dialog -->
+
+    <dialog class="dialogclose" id="addRequest">
+        <div class="DialogContent">
+            <div class="requestContent">
+                <div class="start">
+                    <h1>اضافة طلب</h1>
+                </div>
+                <div class="center" >
+                    <div class="issues">
+                        <h1>الاعطال</h1>
+                        <div class="issuesTags ">
+                            <button>انترنت</button>
+                            <button >تعليق</button>
+                            <button >لايعمل</button>
+                            <button >شاشة</button>
+                        </div>
+                
+                    </div>
+
+                      <div class="issues">
+                        <h1>النظام</h1>
+                        <div class="issuesTags ">
+                            <button >Windos7</button>
+                            <button >Windos8</button>
+                            <button >Windos9</button>
+                            <button >Windos10</button>
+                        </div>
+                
+                    </div>
+                    
+                </div>
+                <div class="end">
+                    <span>المبنى</span>
+                    <input type="number" min="1" max="10" required>
+                    <span>الدور</span>
+                    <input type="number" min="1" max="4" required>
+                    <span>القاعة</span>
+                    <input type="number" min="1" max="99" required >
+                  
+                </div>
+            </div>
+            <form class="send formNoReaload">
+                <input type="text" placeholder="وصف المشكلة">
+                <button type="submit" class="add">ارسال</button>
+              
+            </form>
+        </div>
+
+    </dialog>
+
+    <dialog style="height: fit-content;" class="dialogclose" id="dialogRInfo">
+        <div class="DialogContent">
+            <div class="requestContent">
+                <h1>تم الرفض</h1>
+                <p>الطلب خارج نطاق خدمتنا</p>
+            </div>
+
+        </div>
+
+    </dialog>
+
+
 </body>
 
 </html>
