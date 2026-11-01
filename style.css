@@ -77,8 +77,9 @@ body {
 header {
     position: sticky;
     top: 0;
-    padding: 0px 20px;
-    height: 70px;
+    overflow: hidden;
+    padding: 20px 15px;
+    min-height: 40px;
     justify-content: flex-start;
     background-color: #f8f8f8;
     /* background-color:#f8f9fa; */
@@ -134,12 +135,13 @@ header nav ul li a , nav ul li  div {
 /* ========================================== */
 
 .index-page main {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    height: auto;
+    min-height:calc(100vh - 70px);
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/technology.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -184,6 +186,47 @@ header nav ul li a , nav ul li  div {
 
 }
 
+
+.index-page footer{
+    background-color: #171614;
+    color:white;
+    white-space:nowrap;
+
+}
+
+.index-page footer .container{
+    padding:20px 15px;
+    display: flex;
+    gap: 30px;
+
+
+}
+
+.index-page footer .container div{
+    display: flex;
+    flex-direction:column;
+    gap: 20px;
+    align-items: center;
+
+    
+}
+
+.index-page footer .container a{
+  color: rgb(211, 211, 211);
+  text-decoration: none;
+    
+}
+
+.index-page footer .container a:hover{
+  color: rgb(211, 211, 211);
+  text-decoration: underline;
+    
+}
+
+.index-page footer .copyRight{
+    text-align: center;
+    padding-bottom: 10px;
+}
 
 /* ========================================== */
 /*                SIGN-UP PAGE                */
